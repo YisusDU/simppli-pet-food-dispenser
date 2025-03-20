@@ -1,6 +1,6 @@
 // Función para dispensar comida
 document.getElementById('dispense-button').addEventListener('click', function() {
-    fetch('/dispense', { method: 'POST' })
+    fetch('http://10.10.0.2/dispense', { method: 'POST' })
         .then(response => {
             if (response.ok) {
                 alert('Comida dispensada!');

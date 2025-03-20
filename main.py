@@ -35,8 +35,15 @@ def abrir_servomotor():
     time.sleep(3)  # Mantenerlo abierto por 3 segundos
     servo.off()  # Cerrar el servomotor
 
+# Configurar el servidor
+@route('/dispense', methods=['POST'])
+def dispense():
+    abrir_servomotor()
+    return 'Comida dispensada', 200
+
 # Bucle principal
 while True:
+
     # Obtener la hora actual
     try:
         ntptime.settime()  # Sincronizar la hora
