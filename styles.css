@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-image: url(https://png.pngtree.com/background/20220726/original/pngtree-background-with-dog-paw-print-and-bone-picture-image_1790277.jpg);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    width: 100%;
+    color: #333;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+div {
+    margin-bottom: 15px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+input[type="time"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+@media (hover:hover){
+    button:hover {
+        background-color: #218838;
+    }
+    
+}
+
