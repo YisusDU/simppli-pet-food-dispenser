@@ -10,25 +10,30 @@
     <script src="script.js" defer></script>
 
     <main>
-      <h1>🐕Dispensador de Comida para Perros🐩</h1>
+      <h1>🐕 Dispensador de Comida para Perros 🐩</h1>
 
-      <div>
-        <label for="morning-time">Hora de la mañana:</label>
-        <input type="time" id="morning-time" />
-      </div>
-      <div>
-        <label for="afternoon-time">Hora de la tarde:</label>
-        <input type="time" id="afternoon-time" />
-      </div>
-      <div>
-        <label for="evening-time">Hora de la noche:</label>
-        <input type="time" id="evening-time" />
-      </div>
-      <button id="dispense-button">Dispensar Comida</button>
+      <form id="schedule-form">
+        <div>
+          <label for="morning-time">Hora de la mañana:</label>
+          <input type="time" id="morning-time" required />
+        </div>
+        <div>
+          <label for="afternoon-time">Hora de la tarde:</label>
+          <input type="time" id="afternoon-time" required />
+        </div>
+        <div>
+          <label for="evening-time">Hora de la noche:</label>
+          <input type="time" id="evening-time" required />
+        </div>
+        <div>
+          <button type="button" id="dispense-button">Dispensar Comida</button>
+          <button type="submit" id="update-times-button">Actualizar Horarios</button>
+        </div>
+      </form>
 
       <p>
         <i>Nota*</i>
-        <br>
+        <br />
         No olvides dejarle agua limpia a tu perro en todo momento.
       </p>
     </main>

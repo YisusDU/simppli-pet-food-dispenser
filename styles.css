@@ -4,38 +4,53 @@ body {
     margin: 0;
     padding: 20px;
     background-image: url(https://png.pngtree.com/background/20220726/original/pngtree-background-with-dog-paw-print-and-bone-picture-image_1790277.jpg);
-}
-main{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 h1 {
-    width: 100%;
     color: #333;
     text-align: center;
-    flex-wrap: nowrap;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 div {
     margin-bottom: 15px;
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
     text-align: center;
-    flex-wrap: nowrap;
-    display: flex;
+    font-weight: bold;
+    width: 100%;
+    max-width: 200px;
 }
 
 input[type="time"] {
@@ -44,9 +59,16 @@ input[type="time"] {
     max-width: 200px;
     border: 1px solid #000000;
     border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
 }
 
-
+div:last-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
 button {
     padding: 10px 15px;
     background-color: #28a745;
@@ -54,17 +76,45 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
 }
-p{
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
+    margin-top: 10px;
 }
 
-@media (hover:hover){
-    button:hover {
-        background-color: #218838;
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
     }
-    
-}
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="time"] {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
