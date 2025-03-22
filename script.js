@@ -1,3 +1,5 @@
+const esp32Ip = '10.10.0.2';  // Reemplaza con la dirección IP del ESP32
+
 document.addEventListener('DOMContentLoaded', () => {
     // Cargar horarios al iniciar
     loadSchedules();
@@ -5,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dispensar comida
     document.getElementById('dispense-button').addEventListener('click', async () => {
         try {
-            const response = await fetch('http://10.10.0.2/dispense', { method: 'POST' });
+            const response = await fetch(`http://${esp32Ip}/dispense`, { method: 'POST' });
             if (response.ok) {
                 alert('Comida dispensada!');
             } else {
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('http://10.10.0.2/update_times', {
+            const response = await fetch(`http://${esp32Ip}/update_times`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ morning: morningTime, afternoon: afternoonTime, evening: eveningTime }),
@@ -51,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Cargar horarios
 async function loadSchedules() {
     try {
-        const response = await fetch('http://10.10.0.2/get_times');
+        const response = await fetch(`http://${esp32Ip}/get_times`);
         if (response.ok) {
             const times = await response.json();
             document.getElementById('morning-time').value = times.morning;
