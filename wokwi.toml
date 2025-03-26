@@ -1,0 +1,12 @@
+[wokwi]
+version = 1
+firmware = "./firmware/main.elf"  # Alternativa válida
+
+[env]
+board = "esp32-devkit-c-v4"
+framework = "arduino"
+monitor_speed = 115200
+
+[libraries]
+WiFi = "2.0.0"
+ESP32Servo = "1.2.0"
