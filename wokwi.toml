@@ -1,6 +1,6 @@
 [wokwi]
 version = 1
-firmware = "src/main.ino"  # Ruta relativa desde la raíz
+firmware = "main/main.ino"
 
 [env]
 board = "esp32-devkit-c-v4"
@@ -8,7 +8,7 @@ framework = "arduino"
 monitor_speed = 115200
 
 [libraries]
-WiFi = "*"
-WebServer = "*"
-NTPClient = "*"
-ESP32Servo = "*"
+ESP32Servo = "1.1.0"
+WiFi = "2.0.0"
+WebServer = "2.1.0"
+NTPClient = "3.2.0"
